@@ -1,0 +1,31 @@
+header {
+  .container {
+    @apply max-w-containerFull mx-auto my-0 flex items-center justify-around;
+    nav {
+      ul {
+        @apply flex;
+        li {
+          @apply pr-[33px];
+          &:last-of-type {
+            @apply pr-0;
+          }
+          .link {
+            @apply pb-[21px] text-link hover:border-b-[2px] hover:border-accent;
+          }
+        }
+      }
+    }
+    .secondNav {
+      @apply flex items-center;
+      .search {
+        @apply pr-[21px] hover:opacity-[60%];
+      }
+      .fav {
+        @apply flex pr-[33px] hover:opacity-[80%];
+        span {
+          @apply w-[19px] h-[19px] rounded-[100%] flex justify-center items-center bg-favorite text-white text-fav relative top-[-5px] left-[-5px];
+        }
+      }
+    }
+  }
+}
