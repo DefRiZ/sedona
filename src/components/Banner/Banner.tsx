@@ -9,11 +9,11 @@ import decorate from "../../img/banner/decorate.svg";
 const Banner = () => {
   return (
     <section>
-      <div className={styles.root}>
+      <section className={styles.root}>
         <img className={styles.title} src={title} alt="title" />
         <img className={styles.banner} src={background} alt="banner" />
         <img className={styles.decorate} src={decorate} alt="decorate" />
-      </div>
+      </section>
     </section>
   );
 };

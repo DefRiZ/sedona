@@ -1,0 +1,22 @@
+.root {
+  @apply bg-subscribe bg-cover pb-[94px];
+  .title {
+    @apply pt-[94px] mb-[30px] text-white;
+  }
+  .subtitle {
+    @apply mb-[40px] text-white;
+  }
+  form {
+    @apply flex justify-center;
+    .input {
+      &::placeholder {
+        @apply text-black opacity-[0.8] text-text leading-link;
+      }
+
+      @apply py-[20px] pl-[20px] pr-[300px] rounded-l-[10px];
+    }
+  }
+  .btn {
+    @apply text-text text-white font-bold leading-link py-[20px] px-[40px] bg-benefits rounded-r-[10px];
+  }
+}
