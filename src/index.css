@@ -8,6 +8,10 @@
   font-family: "PT Sans", sans-serif;
 }
 
+input {
+  outline: none;
+}
+
 /* Указываем box sizing */
 *,
 *::before,

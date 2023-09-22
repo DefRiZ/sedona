@@ -31,6 +31,9 @@ module.exports = {
       backgroundColor: {
         benefits: "#83B3D3",
       },
+      backgroundImage: {
+        subscribe: "url('C:/github/sedona/src/img/subscribe/bg.jpg')",
+      },
     },
   },
   plugins: [],

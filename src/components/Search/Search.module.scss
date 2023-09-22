@@ -1,0 +1,12 @@
+.root {
+  h2 {
+    @apply pt-[90px] mb-[30px];
+  }
+
+  .btnWrap {
+    @apply flex justify-center mt-[73px] mb-[90px];
+    .btn {
+      @apply inline-block py-[30px] px-[200px];
+    }
+  }
+}
