@@ -5,3 +5,11 @@
 .container {
   @apply max-w-[1200px] mx-auto;
 }
+
+.title {
+  @apply font-bold text-title leading-title text-center;
+}
+
+.subtitle {
+  @apply text-sub leading-sub text-center;
+}

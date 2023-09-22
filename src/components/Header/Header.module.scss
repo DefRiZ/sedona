@@ -10,7 +10,7 @@ header {
             @apply pr-0;
           }
           .link {
-            @apply pb-[16px] text-link hover:border-b-[2px] hover:border-accent font-bold;
+            @apply pb-[16px] text-link hover:border-b-[2px] hover:border-accent font-bold leading-link;
           }
         }
       }
