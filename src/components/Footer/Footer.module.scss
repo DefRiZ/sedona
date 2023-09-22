@@ -1,0 +1,23 @@
+.container {
+  @apply max-w-[1200px] mx-auto flex justify-around pt-[50px] pb-[40px];
+
+  .social {
+    @apply flex;
+    .link {
+      &:last-of-type {
+        @apply mr-0;
+      }
+      @apply mr-[30px];
+    }
+  }
+  .number {
+    a {
+      @apply text-[4.0rem];
+    }
+  }
+  .copyright {
+    h2 {
+      @apply text-[4.0rem];
+    }
+  }
+}

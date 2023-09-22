@@ -17,6 +17,6 @@
     }
   }
   .btn {
-    @apply text-text text-white font-bold leading-link py-[20px] px-[40px] bg-benefits rounded-r-[10px];
+    @apply text-text text-white font-bold leading-link py-[20px] px-[40px] bg-benefits rounded-r-[10px] cursor-pointer;
   }
 }
