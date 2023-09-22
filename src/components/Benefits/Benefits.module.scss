@@ -1,0 +1,47 @@
+.root {
+  .titleSection {
+    .title {
+      @apply mt-[63px] mb-[23px];
+    }
+    .subtitle {
+      @apply mb-[79px];
+    }
+  }
+  .infoSection {
+    @apply grid grid-cols-3;
+    h3 {
+      @apply text-benefitsTitle leading-benefitsTitle font-bold text-center mt-[98px] mb-[25px];
+    }
+    span,
+    p {
+      @apply text-benefitsText leading-benefitsText text-center block;
+    }
+    p {
+      @apply mt-[20px] mb-[79px];
+    }
+    img {
+      &:last-of-type {
+        @apply col-start-2;
+      }
+      @apply col-span-2;
+    }
+    .benefit {
+      &:first-of-type {
+        @apply bg-benefits text-white;
+      }
+      &:nth-of-type(5) {
+        @apply row-start-3 bg-benefits text-white;
+      }
+    }
+    .house,
+    .food,
+    .gifts {
+      img {
+        @apply mt-[89px] mx-auto;
+      }
+      h3 {
+        @apply mt-[23px] mb-[20px];
+      }
+    }
+  }
+}
