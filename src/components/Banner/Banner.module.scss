@@ -1,0 +1,12 @@
+.root {
+  @apply relative;
+  .banner {
+    @apply relative z-[-1] top-[-5px];
+  }
+  .title {
+    @apply absolute top-[8%] left-[31.5%] max-w-[40%];
+  }
+  .decorate {
+    @apply absolute top-[87.5%];
+  }
+}
