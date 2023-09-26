@@ -1,0 +1,46 @@
+.root {
+  .image {
+    @apply flex;
+  }
+  &:first-of-type {
+    @apply border-t;
+  }
+  @apply flex justify-between py-[30px]  border-b border-black;
+  .about {
+    img {
+      @apply mr-[36px];
+    }
+    @apply flex;
+  }
+  .info {
+    h2 {
+      @apply text-benefitsTitle leading-[3.1rem] font-bold;
+    }
+    .about {
+      span {
+        &:first-of-type {
+          @apply mr-[78px];
+        }
+        @apply text-benefitsText leading-[2.3rem];
+      }
+    }
+    .buttons {
+      @apply mt-[30px];
+      .btnFav {
+        @apply py-[15px] ml-[8px] bg-benefits;
+      }
+    }
+  }
+  .rating {
+    @apply flex flex-col justify-between;
+    .image {
+      @apply mx-auto;
+      img {
+        @apply max-w-[18px] max-h-[18px];
+      }
+    }
+    span {
+      @apply px-[20px] py-[10px] bg-[#F2F2F2] text-btn;
+    }
+  }
+}

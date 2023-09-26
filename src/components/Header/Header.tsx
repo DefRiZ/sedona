@@ -44,7 +44,7 @@ const Header = () => {
             <img src={favorites} alt="favorites places" />
             <span>12</span>
           </button>
-          <Link className={`${styles.btn}, ${global.btn}`} to="/">
+          <Link className={`${styles.btn}, ${global.btn}`} to="/hotels">
             Хочу сюда!
           </Link>
         </div>

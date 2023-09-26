@@ -1,6 +1,6 @@
 header {
   .container {
-    @apply max-w-containerFull mx-auto my-0 flex items-center justify-around;
+    @apply max-w-containerFull mx-auto my-0 flex items-center justify-between px-[71px];
     nav {
       ul {
         @apply flex;

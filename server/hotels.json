@@ -5,7 +5,7 @@
       "name": "Amara Resort & Spa",
       "type": "Гостиница",
       "price": "4000",
-      "rate": "8",
+      "rate": 8,
       "image": "/imgHotels/hotel-1.jpg"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Desert Quail Inn",
       "type": "Мотель",
       "price": "3000",
-      "rate": "7",
+      "rate": 7,
       "image": "/imgHotels/hotel-2.jpg"
     },
     {
@@ -21,7 +21,7 @@
       "name": "Villas at Poco Diablo",
       "type": "Апартаменты",
       "price": "2000",
-      "rate": "9",
+      "rate": 9,
       "image": "/imgHotels/hotel-3.jpg"
     },
     {
@@ -29,7 +29,7 @@
       "name": "GreenTree Inn",
       "type": "Гостиница",
       "price": "2500",
-      "rate": "10",
+      "rate": 10,
       "image": "/imgHotels/hotel-4.jpg"
     }
   ]
