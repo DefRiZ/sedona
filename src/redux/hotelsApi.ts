@@ -13,8 +13,8 @@ export const hotelsApi = createApi({
   reducerPath: "hotelsApi",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (builder) => ({
-    getHotels: builder.query<any, string>({
-      query: (hotels: string) => "hotels",
+    getHotels: builder.query<elementApi[], string>({
+      query: (sort) => `hotels?_sort=${sort}`,
     }),
   }),
 });
