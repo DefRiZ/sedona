@@ -3,4 +3,10 @@
   .list {
     @apply grid grid-cols-1;
   }
+  .sort {
+    @apply flex justify-between pt-[50px] pb-[45px];
+    h3 {
+      @apply text-title leading-[3.8rem] font-bold;
+    }
+  }
 }
