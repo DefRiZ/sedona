@@ -14,5 +14,11 @@
         @apply leading-text text-btn cursor-pointer;
       }
     }
+    .filtration {
+      @apply flex justify-between items-center;
+      .resetBtn {
+        @apply text-text leading-[2.3rem] self-start;
+      }
+    }
   }
 }
