@@ -1,0 +1,21 @@
+.root {
+  @apply flex items-center justify-between bg-white p-[25px] rounded-2xl;
+  .photo {
+    @apply max-w-[40px] max-h-[40px] rounded-full;
+  }
+  .info {
+    @apply flex;
+    .about {
+      @apply flex flex-col ml-[17px] mr-[144px];
+      .name {
+        @apply text-text leading-[18px] font-bold mb-[5px];
+      }
+      .type {
+        @apply text-btn;
+      }
+    }
+  }
+  .remove {
+    @apply block w-[20px] h-[20px];
+  }
+}

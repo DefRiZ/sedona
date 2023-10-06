@@ -5,7 +5,7 @@ import global from "../../global.module.scss";
 
 import star from "../../img/singlePage/Vector.svg";
 
-import { elementApi } from "../../redux/hotelsApi";
+import { elementApi, useAddToFavoriteMutation } from "../../redux/hotelsApi";
 import { Link } from "react-router-dom";
 
 const HotelItem: React.FC<elementApi> = ({
@@ -16,6 +16,7 @@ const HotelItem: React.FC<elementApi> = ({
   rate,
   image,
 }) => {
+  //
   const one = (
     <div className={styles.image}>
       <img src={star} alt="star" />
@@ -51,6 +52,18 @@ const HotelItem: React.FC<elementApi> = ({
       <img src={star} alt="star" />
     </div>
   );
+  //
+  const [addToFavorite] = useAddToFavoriteMutation();
+  const onClickAdd = async () => {
+    await addToFavorite({
+      id,
+      name,
+      type,
+      price,
+      rate,
+      image,
+    });
+  };
   return (
     <div className={styles.root}>
       <div className={styles.about}>
@@ -65,7 +78,10 @@ const HotelItem: React.FC<elementApi> = ({
             <Link className={`${global.btn} ${styles.btn}`} to="/">
               ПОДРОБНЕЕ
             </Link>
-            <button className={`${global.btn} ${styles.btnFav}`}>
+            <button
+              onClick={() => onClickAdd()}
+              className={`${global.btn} ${styles.btnFav}`}
+            >
               В ИЗБРАННОЕ
             </button>
           </div>
