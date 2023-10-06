@@ -19,11 +19,15 @@ const filterSlice = createSlice({
     },
     setApartmenType(state, action: PayloadAction<string>) {
       state.apartmenType = action.payload;
-      console.log(state.apartmenType);
+    },
+    setByDefault(state) {
+      state.sort = { name: "Сначала дешевые", sort: "price&_order=asc" };
+      state.apartmenType = "";
     },
   },
 });
 
-export const { setSortType, setApartmenType } = filterSlice.actions;
+export const { setSortType, setApartmenType, setByDefault } =
+  filterSlice.actions;
 
 export default filterSlice.reducer;
