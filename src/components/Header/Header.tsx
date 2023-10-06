@@ -7,8 +7,11 @@ import global from "../../global.module.scss";
 import logo from "../../img/header/logo.svg";
 import search from "../../img/header/search.svg";
 import favorites from "../../img/header/heart.svg";
+import { useGetFavoritesQuery } from "../../redux/hotelsApi";
+import FavoritesItems from "../FavoritesItems/FavoritesItems";
 
 const Header = () => {
+  const { data = [] } = useGetFavoritesQuery(null);
   return (
     <header>
       <div className={styles.container}>
@@ -42,8 +45,9 @@ const Header = () => {
           </Link>
           <button className={styles.fav}>
             <img src={favorites} alt="favorites places" />
-            <span>12</span>
+            <span>{data.length}</span>
           </button>
+          <FavoritesItems />
           <Link className={`${styles.btn}, ${global.btn}`} to="/hotels">
             Хочу сюда!
           </Link>
