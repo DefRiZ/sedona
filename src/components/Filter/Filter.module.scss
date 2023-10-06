@@ -1,0 +1,18 @@
+.root {
+  @apply bg-filter bg-cover text-white px-0;
+  .container {
+    @apply px-[71px];
+    h1 {
+      @apply text-[6.0rem] leading-[7.7rem] mt-[35px];
+    }
+    .breadcrumbs {
+      @apply flex items-center mt-[5px] mb-[45px];
+      img {
+        @apply mr-[10px];
+      }
+      span {
+        @apply leading-text text-btn cursor-pointer;
+      }
+    }
+  }
+}

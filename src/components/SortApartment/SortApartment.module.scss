@@ -1,0 +1,26 @@
+.root {
+  .title {
+    @apply text-link leading-link mb-[30px];
+  }
+  .radio {
+    @apply flex flex-col justify-center pb-[83px];
+    label {
+      @apply flex;
+      input {
+        @apply hidden;
+      }
+      .fake {
+        @apply w-[20px] h-[20px] bg-white block rounded-full relative;
+        &::before {
+          @apply content-[""] w-[10px] h-[10px] rounded-full bg-[#3F5E72] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0;
+        }
+      }
+      input:checked + .fake::before {
+        @apply opacity-100;
+      }
+      .text {
+        @apply text-text leading-[2.3rem] ml-[20px] mb-[13px];
+      }
+    }
+  }
+}

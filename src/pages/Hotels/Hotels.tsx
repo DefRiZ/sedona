@@ -7,23 +7,33 @@ import global from "../../global.module.scss";
 import Sort from "../../components/Sort/Sort";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
+import Filter from "../../components/Filter/Filter";
 
 const Hotels = () => {
-  const { sort } = useSelector((state: RootState) => state.filter);
-  const { data = [], isLoading } = useGetHotelsQuery(sort.sort);
+  const { sort, apartmenType } = useSelector(
+    (state: RootState) => state.filter
+  );
+  const sortType = sort.sort;
+  const { data = [], isLoading } = useGetHotelsQuery({
+    sortType,
+    apartmenType,
+  });
   if (isLoading) <h1>Loading</h1>;
   return (
     <section className={styles.root}>
       <div className={global.container}>
+        <Filter />
         <div className={styles.sort}>
           <h3>Найдено гостиниц: {data.length}</h3>
           <Sort />
         </div>
-        <ul className={styles.list}>
-          {data.map((item: elementApi) => (
-            <HotelItem key={item.id} {...item} />
-          ))}
-        </ul>
+        <div className={styles.hotelsList}>
+          <ul className={styles.list}>
+            {data.map((item: elementApi) => (
+              <HotelItem key={item.id} {...item} />
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

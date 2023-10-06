@@ -25,7 +25,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className={styles.link} to="/">
+              <Link className={styles.link} to="/hotels">
                 Гостиницы
               </Link>
             </li>
