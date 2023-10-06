@@ -9,12 +9,18 @@ export interface elementApi {
   image: string;
 }
 
+export interface getArgs {
+  sortType?: string;
+  apartmenType?: string;
+}
+
 export const hotelsApi = createApi({
   reducerPath: "hotelsApi",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (builder) => ({
-    getHotels: builder.query<elementApi[], string>({
-      query: (sort) => `hotels?_sort=${sort}`,
+    getHotels: builder.query<elementApi[], getArgs>({
+      query: ({ sortType, apartmenType }) =>
+        `hotels?_sort=${sortType}${apartmenType && `&type=${apartmenType}`}`,
     }),
   }),
 });

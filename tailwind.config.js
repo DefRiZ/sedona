@@ -33,6 +33,7 @@ module.exports = {
       },
       backgroundImage: {
         subscribe: "url('C:/github/sedona/src/img/subscribe/bg.jpg')",
+        filter: "url('C:/github/sedona/src/img/sort/catalog-background.jpg')",
       },
     },
   },
