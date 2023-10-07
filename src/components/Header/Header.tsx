@@ -7,10 +7,11 @@ import global from "../../global.module.scss";
 import logo from "../../img/header/logo.svg";
 import search from "../../img/header/search.svg";
 import favorites from "../../img/header/heart.svg";
-import { useGetFavoritesQuery } from "../../redux/hotelsApi";
+import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 import FavoritesItems from "../FavoritesItems/FavoritesItems";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const { data = [] } = useGetFavoritesQuery(null);
   return (
     <header>
@@ -43,11 +44,11 @@ const Header = () => {
           <Link className={styles.search} to="/">
             <img src={search} alt="searching" />
           </Link>
-          <button className={styles.fav}>
+          <button onClick={() => setIsOpen(!isOpen)} className={styles.fav}>
             <img src={favorites} alt="favorites places" />
             <span>{data.length}</span>
           </button>
-          <FavoritesItems />
+          {isOpen && <FavoritesItems />}
           <Link className={`${styles.btn}, ${global.btn}`} to="/hotels">
             Хочу сюда!
           </Link>
