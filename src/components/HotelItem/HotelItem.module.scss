@@ -29,6 +29,9 @@
       .btnFav {
         @apply py-[15px] ml-[8px] bg-benefits;
       }
+      .btnFavAdded {
+        @apply py-[15px] ml-[8px] bg-[#7DB54F];
+      }
     }
   }
   .rating {

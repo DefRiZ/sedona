@@ -56,6 +56,7 @@ const HotelItem: React.FC<elementApi> = ({
   );
   //
   const [addToFavorite] = useAddToFavoriteMutation();
+  const [isFavorite, setIsFavorite] = React.useState(false);
   const onClickAdd = async () => {
     await addToFavorite({
       id,
@@ -64,7 +65,8 @@ const HotelItem: React.FC<elementApi> = ({
       price,
       rate,
       image,
-    });
+    }).unwrap();
+    setIsFavorite(true);
   };
   return (
     <div className={styles.root}>
@@ -80,12 +82,19 @@ const HotelItem: React.FC<elementApi> = ({
             <Link className={`${global.btn} ${styles.btn}`} to="/">
               ПОДРОБНЕЕ
             </Link>
-            <button
-              onClick={() => onClickAdd()}
-              className={`${global.btn} ${styles.btnFav}`}
-            >
-              В ИЗБРАННОЕ
-            </button>
+            {!isFavorite && (
+              <button
+                onClick={() => onClickAdd()}
+                className={`${global.btn} ${styles.btnFav}`}
+              >
+                В ИЗБРАННОЕ
+              </button>
+            )}
+            {isFavorite && (
+              <button className={` ${global.btn} ${styles.btnFavAdded} `}>
+                В ИЗБРАННОМ
+              </button>
+            )}
           </div>
         </div>
       </div>
