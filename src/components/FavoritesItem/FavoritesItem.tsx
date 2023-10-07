@@ -3,6 +3,7 @@ import styles from "./FavoritesItem.module.scss";
 import remove from "../../img/favorites/delete.svg";
 
 import { elementApi } from "../../redux/hotelsApi";
+import { useDeleteFromFavoriteMutation } from "../../redux/favoritesApi";
 
 const FavoritesItem: React.FC<elementApi> = ({
   id,
@@ -12,6 +13,10 @@ const FavoritesItem: React.FC<elementApi> = ({
   rate,
   image,
 }) => {
+  const [deleteFromFavorite] = useDeleteFromFavoriteMutation();
+  const onClickDelete = async (id: number) => {
+    await deleteFromFavorite(id).unwrap();
+  };
   return (
     <div className={styles.root}>
       <div className={styles.info}>
@@ -21,7 +26,7 @@ const FavoritesItem: React.FC<elementApi> = ({
           <span className={styles.type}>{type}</span>
         </div>
       </div>
-      <button className={styles.remove}>
+      <button onClick={() => onClickDelete(id)} className={styles.remove}>
         <img src={remove} alt="wth" />
       </button>
     </div>

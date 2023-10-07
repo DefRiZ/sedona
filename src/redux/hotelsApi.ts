@@ -22,22 +22,15 @@ export const hotelsApi = createApi({
     getHotels: builder.query<elementApi[], getArgs>({
       query: ({ sortType, apartmenType }) =>
         `hotels?_sort=${sortType}${apartmenType && `&type=${apartmenType}`}`,
-    }),
-    getFavorites: builder.query<elementApi[], null>({
-      query: () => `favorites`,
-    }),
-    addToFavorite: builder.mutation({
-      query: (body: elementApi) => ({
-        url: "favorites",
-        method: "POST",
-        body,
-      }),
+      providesTags: (result) =>
+        result
+          ? [
+              ...result.map(({ id }) => ({ type: "Hotels" as const, id })),
+              { type: "Hotels", id: "LIST" },
+            ]
+          : [{ type: "Hotels", id: "LIST" }],
     }),
   }),
 });
 
-export const {
-  useGetHotelsQuery,
-  useGetFavoritesQuery,
-  useAddToFavoriteMutation,
-} = hotelsApi;
+export const { useGetHotelsQuery } = hotelsApi;

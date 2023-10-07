@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./FavoritesItems.module.scss";
 
-import { useGetFavoritesQuery } from "../../redux/hotelsApi";
+import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 import FavoritesItem from "../FavoritesItem/FavoritesItem";
 
 const FavoritesItems = () => {

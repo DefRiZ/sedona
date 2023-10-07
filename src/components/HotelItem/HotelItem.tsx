@@ -5,7 +5,9 @@ import global from "../../global.module.scss";
 
 import star from "../../img/singlePage/Vector.svg";
 
-import { elementApi, useAddToFavoriteMutation } from "../../redux/hotelsApi";
+import { elementApi } from "../../redux/hotelsApi";
+import { useAddToFavoriteMutation } from "../../redux/favoritesApi";
+
 import { Link } from "react-router-dom";
 
 const HotelItem: React.FC<elementApi> = ({
