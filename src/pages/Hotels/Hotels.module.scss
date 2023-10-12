@@ -11,4 +11,7 @@
   .hotelsList {
     @apply px-[71px];
   }
+  .paginationBlock {
+    @apply flex justify-between pt-[50px] pb-[45px] px-[71px];
+  }
 }
