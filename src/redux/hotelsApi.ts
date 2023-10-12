@@ -12,6 +12,7 @@ export interface elementApi {
 export interface getArgs {
   sortType?: string;
   apartmenType?: string;
+  range?: [number, number];
 }
 
 export const hotelsApi = createApi({
@@ -20,8 +21,10 @@ export const hotelsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (builder) => ({
     getHotels: builder.query<elementApi[], getArgs>({
-      query: ({ sortType, apartmenType }) =>
-        `hotels?_sort=${sortType}${apartmenType && `&type=${apartmenType}`}`,
+      query: ({ sortType, apartmenType, range }) =>
+        `hotels?_sort=${sortType}${apartmenType && `&type=${apartmenType}`}${
+          range && `&price_gte=${range[0]}&price_lte=${range[1]}`
+        }`,
       providesTags: (result) =>
         result
           ? [
