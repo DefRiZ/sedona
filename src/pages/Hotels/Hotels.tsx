@@ -8,9 +8,10 @@ import Sort from "../../components/Sort/Sort";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Filter from "../../components/Filter/Filter";
+import PaginationBlock from "../../components/PaginationBlock/PaginationBlock";
 
 const Hotels = () => {
-  const { sort, apartmenType, range } = useSelector(
+  const { sort, apartmenType, range, currentPage, itemsPerPage } = useSelector(
     (state: RootState) => state.filter
   );
   const sortType = sort.sort;
@@ -18,7 +19,10 @@ const Hotels = () => {
     sortType,
     apartmenType,
     range,
+    currentPage,
+    itemsPerPage,
   });
+  console.log(data);
   if (isLoading) <h1>Loading</h1>;
   return (
     <section className={styles.root}>
@@ -34,6 +38,9 @@ const Hotels = () => {
               <HotelItem key={item.id} {...item} />
             ))}
           </ul>
+        </div>
+        <div className={styles.paginationBlock}>
+          <PaginationBlock />
         </div>
       </div>
     </section>
