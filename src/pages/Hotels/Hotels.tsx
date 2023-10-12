@@ -10,13 +10,14 @@ import { RootState } from "../../redux/store";
 import Filter from "../../components/Filter/Filter";
 
 const Hotels = () => {
-  const { sort, apartmenType } = useSelector(
+  const { sort, apartmenType, range } = useSelector(
     (state: RootState) => state.filter
   );
   const sortType = sort.sort;
   const { data = [], isLoading } = useGetHotelsQuery({
     sortType,
     apartmenType,
+    range,
   });
   if (isLoading) <h1>Loading</h1>;
   return (

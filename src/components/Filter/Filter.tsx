@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 
 import { useAppDispatch } from "../../redux/store";
 import { setByDefault } from "../../redux/slices/filterSlice";
+import RangeSlider from "../RangeSlider/RangeSlider";
 
 const Filter = () => {
   const dispatch = useAppDispatch();
-
   return (
     <section className={styles.root}>
       <div className={styles.container}>
@@ -26,9 +26,8 @@ const Filter = () => {
           <span>Гостиницы</span>
         </div>
         <div className={styles.filtration}>
-          <form>
-            <SortApartment />
-          </form>
+          <SortApartment />
+          <RangeSlider />
           <button
             onClick={() => dispatch(setByDefault())}
             className={styles.resetBtn}

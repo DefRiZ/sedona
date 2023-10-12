@@ -1,6 +1,6 @@
 .root {
   .title {
-    @apply text-link leading-link mb-[30px];
+    @apply text-link leading-link mb-[30px] font-bold;
   }
   .radio {
     @apply flex flex-col justify-center pb-[83px];
