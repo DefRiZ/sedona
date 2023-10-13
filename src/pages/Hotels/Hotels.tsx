@@ -9,6 +9,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Filter from "../../components/Filter/Filter";
 import PaginationBlock from "../../components/PaginationBlock/PaginationBlock";
+import ItemsQty from "../../components/ItemsQty/ItemsQty";
+import Subscribe from "../../components/Subscribe/Subscribe";
 
 const Hotels = () => {
   const { sort, apartmenType, range, currentPage, itemsPerPage } = useSelector(
@@ -41,7 +43,9 @@ const Hotels = () => {
         </div>
         <div className={styles.paginationBlock}>
           <PaginationBlock />
+          <ItemsQty />
         </div>
+        <Subscribe />
       </div>
     </section>
   );

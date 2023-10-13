@@ -1,4 +1,4 @@
-import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface initialStateArgs {
   sort: { name: string; sort: string };
@@ -32,10 +32,14 @@ const filterSlice = createSlice({
     setCurrentPage(state, action: PayloadAction<number>) {
       state.currentPage = action.payload;
     },
+    setitemsPerPage(state, action: PayloadAction<number>) {
+      state.itemsPerPage = action.payload;
+    },
     setByDefault(state) {
       state.sort = { name: "Сначала дешевые", sort: "price&_order=asc" };
       state.apartmenType = "";
       state.range = [0, 9000];
+      state.itemsPerPage = 4;
     },
   },
 });
@@ -46,6 +50,7 @@ export const {
   setByDefault,
   setRange,
   setCurrentPage,
+  setitemsPerPage,
 } = filterSlice.actions;
 
 export default filterSlice.reducer;

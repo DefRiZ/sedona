@@ -1,0 +1,27 @@
+.root {
+  @apply relative;
+  .selected {
+    @apply flex items-center;
+    .title {
+      @apply text-text leading-[2.3rem] mr-[50px];
+    }
+    .label {
+      @apply flex px-[19px] py-[12px] border-[2px] border-[#E6E6E6] cursor-pointer;
+      .chosen {
+        @apply text-text leading-[2.3rem] mr-[100px];
+      }
+    }
+  }
+  .popup {
+    @apply absolute right-0 bg-white;
+    .item {
+      @apply text-text text-[#333333] px-[30px] py-[12px] border-b-[#E6E6E6] border-[1px] cursor-pointer;
+      &:hover {
+        @apply bg-benefits  opacity-60;
+      }
+    }
+    .active {
+      @apply text-text text-white px-[30px] py-[12px] border-b-[#E6E6E6] border-[1px] cursor-pointer bg-benefits;
+    }
+  }
+}
