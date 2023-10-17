@@ -1,0 +1,22 @@
+.container {
+  @apply relative;
+  .root {
+    @apply bg-white/90 w-[100%] h-[100vh] fixed z-20 top-0 left-0;
+    .navigation {
+      @apply flex flex-col items-center mt-[20%];
+      li {
+        @apply mt-[20px] block;
+        .link {
+          @apply text-title leading-title;
+        }
+        .fav {
+          @apply ml-[45px] flex pr-[33px] hover:opacity-[80%];
+
+          span {
+            @apply w-[19px] h-[19px] rounded-[100%] flex justify-center items-center bg-favorite text-white text-fav relative top-[-5px] left-[-5px];
+          }
+        }
+      }
+    }
+  }
+}

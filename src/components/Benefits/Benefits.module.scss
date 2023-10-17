@@ -9,6 +9,12 @@
   }
   .infoSection {
     @apply grid grid-cols-3;
+    @media (max-width: 1200px) {
+      @apply grid-cols-2;
+    }
+    @media (max-width: 750px) {
+      @apply grid-cols-1;
+    }
     h3 {
       @apply text-benefitsTitle leading-benefitsTitle font-bold text-center mt-[98px] mb-[25px];
     }
@@ -25,23 +31,42 @@
       }
       @apply col-span-2;
     }
+    .img {
+      @media (max-width: 1200px) {
+        @apply hidden;
+      }
+    }
     .benefit {
+      @apply duration-500;
       &:first-of-type {
         @apply bg-benefits text-white;
       }
       &:nth-of-type(5) {
         @apply row-start-3 bg-benefits text-white;
       }
+      &:first-of-type:hover {
+        @apply bg-benefits;
+      }
+      &:nth-of-type(5):hover {
+        @apply bg-benefits;
+      }
     }
     .house,
     .food,
     .gifts {
+      @apply duration-500;
       img {
         @apply mt-[89px] mx-auto;
       }
       h3 {
         @apply mt-[23px] mb-[20px];
       }
+    }
+    .benefit:hover,
+    .house:hover,
+    .food:hover,
+    .gifts:hover {
+      @apply bg-benefits/60 cursor-pointer scale-[1.02];
     }
   }
 }
