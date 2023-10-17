@@ -6,6 +6,7 @@ export interface initialStateArgs {
   range: [number, number];
   itemsPerPage: number;
   currentPage: number;
+  isOpenBurger: boolean;
 }
 
 const initialState: initialStateArgs = {
@@ -14,6 +15,7 @@ const initialState: initialStateArgs = {
   range: [0, 9000],
   itemsPerPage: 4,
   currentPage: 1,
+  isOpenBurger: false,
 };
 
 const filterSlice = createSlice({
@@ -35,6 +37,9 @@ const filterSlice = createSlice({
     setitemsPerPage(state, action: PayloadAction<number>) {
       state.itemsPerPage = action.payload;
     },
+    setIsOpenBurger(state) {
+      state.isOpenBurger = !state.isOpenBurger;
+    },
     setByDefault(state) {
       state.sort = { name: "Сначала дешевые", sort: "price&_order=asc" };
       state.apartmenType = "";
@@ -51,6 +56,7 @@ export const {
   setRange,
   setCurrentPage,
   setitemsPerPage,
+  setIsOpenBurger,
 } = filterSlice.actions;
 
 export default filterSlice.reducer;

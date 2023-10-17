@@ -31,7 +31,7 @@ const Benefits = () => {
             жизнь
           </p>
         </div>
-        <img src={firstImg} alt="banner" />
+        <img className={styles.img} src={firstImg} alt="banner" />
         <div className={styles.house}>
           <img src={house} alt="apartment" />
           <h3>Жильё</h3>
@@ -55,7 +55,7 @@ const Benefits = () => {
             производства!
           </p>
         </div>
-        <img src={secondImg} alt="banner" />
+        <img className={styles.img} src={secondImg} alt="banner" />
         <div className={styles.benefit}>
           <h3>
             Там есть <br /> мост дьявола

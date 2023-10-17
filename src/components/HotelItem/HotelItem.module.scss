@@ -32,6 +32,24 @@
       .btnFavAdded {
         @apply py-[15px] ml-[8px] bg-[#7DB54F];
       }
+      .btn,
+      .btnFav,
+      .btnFavAdded {
+        @media (max-width: 800px) {
+          @apply px-[15px];
+        }
+      }
+      .btnFav,
+      .btnFavAdded {
+        @media (max-width: 800px) {
+          @apply py-[10px];
+        }
+      }
+      .btn {
+        @media (max-width: 800px) {
+          @apply py-[7px];
+        }
+      }
     }
   }
   .rating {

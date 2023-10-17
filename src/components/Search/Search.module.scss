@@ -7,6 +7,9 @@
     @apply flex justify-center mt-[73px] mb-[90px];
     .btn {
       @apply inline-block py-[30px] px-[200px];
+      @media (max-width: 750px) {
+        @apply px-[150px];
+      }
     }
   }
 }

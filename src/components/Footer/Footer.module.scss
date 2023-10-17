@@ -13,11 +13,17 @@
   .number {
     a {
       @apply text-[4.0rem];
+      @media (max-width: 800px) {
+        @apply text-text;
+      }
     }
   }
   .copyright {
     h2 {
       @apply text-[4.0rem];
+      @media (max-width: 800px) {
+        @apply text-text;
+      }
     }
   }
 }

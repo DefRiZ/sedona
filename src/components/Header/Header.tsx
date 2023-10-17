@@ -2,15 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Header.module.scss";
-import global from "../../global.module.scss";
 
 import logo from "../../img/header/logo.svg";
 import search from "../../img/header/search.svg";
 import favorites from "../../img/header/heart.svg";
 import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 import FavoritesItems from "../FavoritesItems/FavoritesItems";
+import { RootState, useAppDispatch } from "../../redux/store";
+import { setIsOpenBurger } from "../../redux/slices/filterSlice";
+import { useSelector } from "react-redux";
+import BurgerDrawer from "../BurgerDrawer/BurgerDrawer";
 
 const Header = () => {
+  const dispatch = useAppDispatch();
+  const { isOpenBurger } = useSelector((state: RootState) => state.filter);
   const [isOpen, setIsOpen] = React.useState(false);
   const { data = [] } = useGetFavoritesQuery(null);
   return (
@@ -49,10 +54,17 @@ const Header = () => {
             <span>{data.length}</span>
           </button>
           {isOpen && <FavoritesItems />}
-          <Link className={`${styles.btn}, ${global.btn}`} to="/hotels">
+          <Link className={styles.btn} to="/hotels">
             Хочу сюда!
           </Link>
+          <div
+            onClick={() => dispatch(setIsOpenBurger())}
+            className={styles.burger}
+          >
+            <span></span>
+          </div>
         </div>
+        {isOpenBurger && <BurgerDrawer />}
       </div>
     </header>
   );
