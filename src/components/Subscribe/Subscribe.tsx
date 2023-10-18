@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./Subscribe.module.scss";
 import global from "../../global.module.scss";
 

@@ -6,8 +6,8 @@ import vector from "../../img/sort/Vector.svg";
 
 import { RootState, useAppDispatch } from "../../redux/store";
 import { useSelector } from "react-redux";
-
 import { setSortType } from "../../redux/slices/filterSlice";
+import { URLSearchParamsInit, useSearchParams } from "react-router-dom";
 
 const list = [
   { name: "Сначала дешевые", sort: "price&_order=asc" },
@@ -17,10 +17,18 @@ const list = [
 
 const Sort = () => {
   const [open, setOpen] = React.useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const dispatch = useAppDispatch();
   const { sort } = useSelector((state: RootState) => state.filter);
+
+  const sortType = searchParams.get("parametr") || "";
+
   const changeSortType = (object: { name: string; sort: string }) => {
+    const newSearchParams: URLSearchParamsInit = { parametr: object.sort };
+    setSearchParams(newSearchParams);
     dispatch(setSortType(object));
+    setOpen(false);
   };
   return (
     <div className={styles.sort}>

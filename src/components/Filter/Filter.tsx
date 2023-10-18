@@ -1,16 +1,15 @@
-import React from "react";
-
 import styles from "./Filter.module.scss";
 
 import home from "../../img/sort/home-page.svg";
 import arrow from "../../img/sort/arrow.svg";
 
 import SortApartment from "../SortApartment/SortApartment";
-import { Link } from "react-router-dom";
+import RangeSlider from "../RangeSlider/RangeSlider";
 
 import { useAppDispatch } from "../../redux/store";
 import { setByDefault } from "../../redux/slices/filterSlice";
-import RangeSlider from "../RangeSlider/RangeSlider";
+
+import { Link } from "react-router-dom";
 
 const Filter = () => {
   const dispatch = useAppDispatch();

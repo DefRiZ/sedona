@@ -1,17 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import styles from "./Header.module.scss";
 
 import logo from "../../img/header/logo.svg";
 import search from "../../img/header/search.svg";
 import favorites from "../../img/header/heart.svg";
-import { useGetFavoritesQuery } from "../../redux/favoritesApi";
+
 import FavoritesItems from "../FavoritesItems/FavoritesItems";
+import BurgerDrawer from "../BurgerDrawer/BurgerDrawer";
+
+import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 import { RootState, useAppDispatch } from "../../redux/store";
 import { setIsOpenBurger } from "../../redux/slices/filterSlice";
 import { useSelector } from "react-redux";
-import BurgerDrawer from "../BurgerDrawer/BurgerDrawer";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useAppDispatch();

@@ -1,9 +1,7 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
-
 import styles from "./Search.module.scss";
 import global from "../../global.module.scss";
+
+import { Link } from "react-router-dom";
 
 const Search = () => {
   return (
