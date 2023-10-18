@@ -1,5 +1,7 @@
 import React from "react";
+
 import styles from "./FavoritesItem.module.scss";
+
 import remove from "../../img/favorites/delete.svg";
 
 import { elementApi } from "../../redux/hotelsApi";

@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "rc-slider";
 import "./RangeSlider.scss";
 import styles from "./RangeSlider.module.scss";

@@ -1,10 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../../redux/store";
 
 import styles from "./ItemsQty.module.scss";
 
 import arrow from "../../img/sort/Vector.svg";
+
+import { useSelector } from "react-redux";
+import { RootState, useAppDispatch } from "../../redux/store";
 import { setitemsPerPage } from "../../redux/slices/filterSlice";
 
 const itemsQty = [3, 4, 5, 6];

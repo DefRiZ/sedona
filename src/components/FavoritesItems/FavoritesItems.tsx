@@ -1,13 +1,11 @@
-import React from "react";
-
 import styles from "./FavoritesItems.module.scss";
 
-import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 import FavoritesItem from "../FavoritesItem/FavoritesItem";
+
+import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 
 const FavoritesItems = () => {
   const { data = [] } = useGetFavoritesQuery(null);
-
   return (
     <article>
       <div className={styles.root}>

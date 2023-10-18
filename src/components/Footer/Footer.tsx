@@ -1,10 +1,9 @@
-import React from "react";
-
 import styles from "./Footer.module.scss";
 
 import twit from "../../img/footer/twitter.svg";
 import fb from "../../img/footer/facebook.svg";
 import yb from "../../img/footer/youtube.svg";
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {

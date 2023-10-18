@@ -1,9 +1,8 @@
-import React from "react";
-
 import styles from "./BurgerDrawer.module.scss";
-import { Link } from "react-router-dom";
 
 import favorites from "../../img/header/heart.svg";
+
+import { Link } from "react-router-dom";
 import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 
 const BurgerDrawer = () => {
