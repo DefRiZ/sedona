@@ -24,7 +24,6 @@ const Hotels = () => {
     currentPage,
     itemsPerPage,
   });
-  console.log(data);
   if (isLoading) <h1>Loading</h1>;
   return (
     <section className={styles.root}>

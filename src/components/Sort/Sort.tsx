@@ -30,9 +30,26 @@ const Sort = () => {
     dispatch(setSortType(object));
     setOpen(false);
   };
+
+  const sortRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sortRef.current && !event.composedPath().includes(sortRef.current)) {
+        setOpen(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => document.body.removeEventListener("click", handleClickOutside);
+  }, []);
   return (
     <div className={styles.sort}>
-      <div onClick={() => setOpen(!open)} className={styles.label}>
+      <div
+        ref={sortRef}
+        onClick={() => setOpen(!open)}
+        className={styles.label}
+      >
         <span>{sort.name}</span>
         <img src={vector} alt="arrow" />
       </div>

@@ -18,11 +18,27 @@ const ItemsQty = () => {
     dispatch(setitemsPerPage(item));
     setIsOpen(false);
   };
+  const qtyRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (qtyRef.current && !event.composedPath().includes(qtyRef.current)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => document.body.removeEventListener("click", handleClickOutside);
+  }, []);
   return (
     <div className={styles.root}>
       <div className={styles.selected}>
         <h3 className={styles.title}>Гостиниц на странице:</h3>
-        <div onClick={() => setIsOpen(!isOpen)} className={styles.label}>
+        <div
+          ref={qtyRef}
+          onClick={() => setIsOpen(!isOpen)}
+          className={styles.label}
+        >
           <span className={styles.chosen}>{itemsPerPage}</span>
           <img className={styles.img} src={arrow} alt="selected" />
         </div>

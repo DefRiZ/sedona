@@ -20,6 +20,22 @@ const Header = () => {
   const { isOpenBurger } = useSelector((state: RootState) => state.filter);
   const [isOpen, setIsOpen] = React.useState(false);
   const { data = [] } = useGetFavoritesQuery(null);
+  const favoriteRef = React.useRef<HTMLButtonElement>(null);
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        favoriteRef.current &&
+        !event.composedPath().includes(favoriteRef.current)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
   return (
     <header>
       <div className={styles.container}>
@@ -51,7 +67,11 @@ const Header = () => {
           <Link className={styles.search} to="/">
             <img src={search} alt="searching" />
           </Link>
-          <button onClick={() => setIsOpen(!isOpen)} className={styles.fav}>
+          <button
+            ref={favoriteRef}
+            onClick={() => setIsOpen(!isOpen)}
+            className={styles.fav}
+          >
             <img src={favorites} alt="favorites places" />
             <span>{data.length}</span>
           </button>
