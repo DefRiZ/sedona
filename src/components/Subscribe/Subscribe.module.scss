@@ -1,5 +1,8 @@
 .root {
-  @apply bg-subscribe bg-cover pb-[94px];
+  @apply bg-subscribe bg-cover pb-[94px] duration-500;
+  &:hover {
+    @apply scale-[1.02];
+  }
   .title {
     @apply pt-[94px] mb-[30px] text-white;
   }

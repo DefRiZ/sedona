@@ -6,7 +6,10 @@ import global from "../../global.module.scss";
 import star from "../../img/singlePage/Vector.svg";
 
 import { elementApi } from "../../redux/hotelsApi";
-import { useAddToFavoriteMutation } from "../../redux/favoritesApi";
+import {
+  useAddToFavoriteMutation,
+  useDeleteFromFavoriteMutation,
+} from "../../redux/favoritesApi";
 
 import { Link } from "react-router-dom";
 
@@ -56,6 +59,7 @@ const HotelItem: React.FC<elementApi> = ({
   );
   //
   const [addToFavorite] = useAddToFavoriteMutation();
+  const [deleteFromFavorite] = useDeleteFromFavoriteMutation();
   const [isFavorite, setIsFavorite] = React.useState(false);
   const onClickAdd = async () => {
     await addToFavorite({
@@ -67,6 +71,10 @@ const HotelItem: React.FC<elementApi> = ({
       image,
     }).unwrap();
     setIsFavorite(true);
+  };
+  const onClickRemove = async (id: number) => {
+    await deleteFromFavorite(id).unwrap();
+    setIsFavorite(false);
   };
   return (
     <div className={styles.root}>
@@ -91,7 +99,10 @@ const HotelItem: React.FC<elementApi> = ({
               </button>
             )}
             {isFavorite && (
-              <button className={` ${global.btn} ${styles.btnFavAdded} `}>
+              <button
+                onClick={() => onClickRemove(id)}
+                className={` ${global.btn} ${styles.btnFavAdded} `}
+              >
                 В ИЗБРАННОМ
               </button>
             )}

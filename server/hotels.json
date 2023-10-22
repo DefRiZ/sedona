@@ -83,30 +83,6 @@
   ],
   "favorites": [
     {
-      "id": 4,
-      "name": "GreenTree Inn",
-      "type": "Гостиница",
-      "price": "1500",
-      "rate": 10,
-      "image": "/imgHotels/hotel-4.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Villas at Poco Diablo",
-      "type": "Апартаменты",
-      "price": "2000",
-      "rate": 9,
-      "image": "/imgHotels/hotel-3.jpg"
-    },
-    {
-      "id": 8,
-      "name": "GreenTree Inn",
-      "type": "Гостиница",
-      "price": "2500",
-      "rate": 10,
-      "image": "/imgHotels/hotel-4.jpg"
-    },
-    {
       "id": 7,
       "name": "Villas at Poco Diablo",
       "type": "Апартаменты",
