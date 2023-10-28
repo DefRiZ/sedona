@@ -25,6 +25,9 @@ const Hotels = () => {
     itemsPerPage,
   });
   if (isLoading) <h1>Loading</h1>;
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className={styles.root}>
       <div className={global.container}>

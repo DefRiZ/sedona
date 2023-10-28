@@ -64,7 +64,7 @@ const Header = () => {
           </Link>
         </div>
         <div className={styles.secondNav}>
-          <Link className={styles.search} to="/">
+          <Link className={styles.search} to="/hotels">
             <img src={search} alt="searching" />
           </Link>
           <div ref={favoriteRef}>

@@ -12,7 +12,7 @@ const Search = () => {
         предложения гостиниц в Седоне
       </p>
       <div className={styles.btnWrap}>
-        <Link className={`${global.btn} ${styles.btn}`} to="/hotels">
+        <Link className={styles.btn} to="/hotels">
           ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
         </Link>
       </div>

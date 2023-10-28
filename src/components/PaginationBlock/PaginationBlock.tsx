@@ -24,6 +24,10 @@ const PaginationBlock = () => {
     const newSearchParams: URLSearchParamsInit = { page: newPage.toString() };
     setSearchParams(newSearchParams);
     dispatch(setCurrentPage(newPage));
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
