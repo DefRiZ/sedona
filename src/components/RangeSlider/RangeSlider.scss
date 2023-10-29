@@ -1,5 +1,5 @@
 .rc-slider {
-  @apply relative w-[100%] h-[14px] touch-none mt-[30px];
+  @apply relative w-[100%] h-[14px]  mt-[30px] touch-none;
   .rc-slider-rail {
     @apply absolute w-[100%] h-[4px]  bg-gray-500;
   }
@@ -10,21 +10,6 @@
     @apply absolute w-[100%] h-[4px] bg-transparent;
   }
   .rc-slider-handle {
-    @apply absolute z-10 w-[20px] h-[20px] bg-white cursor-pointer rounded-[5px] mt-[-7px];
+    @apply absolute z-10 w-[20px] h-[20px] bg-white  rounded-[5px] mt-[-7px] cursor-pointer;
   }
 }
-
-// .rc-slider-handle {
-//   position: absolute;
-//   z-index: 1;
-//   width: 14px;
-//   height: 14px;
-//   margin-top: -5px;
-//   background-color: #fff;
-//   border: solid 2px #96dbfa;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   cursor: grab;
-//   opacity: 0.8;
-//   touch-action: pan-x;
-// }

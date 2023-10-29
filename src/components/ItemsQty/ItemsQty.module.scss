@@ -3,12 +3,12 @@
   .selected {
     @apply flex items-center;
     .title {
-      @apply text-text leading-[2.3rem] mr-[50px];
+      @apply leading-[2.3rem] mr-[50px]  text-text;
     }
     .label {
       @apply flex px-[19px] py-[12px] border-[2px] border-[#E6E6E6] cursor-pointer;
       .chosen {
-        @apply text-text leading-[2.3rem] mr-[100px];
+        @apply leading-[2.3rem] mr-[100px]  text-text;
       }
     }
   }

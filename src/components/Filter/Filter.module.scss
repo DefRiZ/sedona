@@ -1,14 +1,14 @@
 .root {
-  @apply bg-filter bg-cover text-white px-0 mt-[-5px];
+  @apply bg-filter text-white px-0 mt-[-5px] bg-cover;
   .container {
-    @apply px-[71px];
+    @apply px-[71px] box-border;
     h1 {
-      @apply text-[6.0rem] leading-[7.7rem] pt-[35px];
+      @apply text-[6.0rem] leading-[7.7rem] pt-[35px] block;
     }
     .breadcrumbs {
-      @apply flex items-center mt-[5px] mb-[45px];
+      @apply flex mt-[5px] mb-[45px]  items-center;
       img {
-        @apply mr-[10px];
+        @apply mr-[10px] block;
       }
       span {
         @apply leading-text text-btn cursor-pointer;
@@ -17,7 +17,7 @@
     .filtration {
       @apply flex justify-between items-start;
       .resetBtn {
-        @apply text-text leading-[2.3rem];
+        @apply leading-[2.3rem] text-text;
       }
     }
   }

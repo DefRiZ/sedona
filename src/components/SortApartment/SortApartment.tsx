@@ -11,7 +11,6 @@ const apartments = ["Гостиница", "Мотель", "Апартамент�
 const SortApartment = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useAppDispatch();
-  const typeApart = searchParams.get("type") || "";
   const onChangeType = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newSearchParams: URLSearchParamsInit = { type: e.target.value };
     setSearchParams(newSearchParams);

@@ -3,15 +3,15 @@
     @apply grid grid-cols-1;
   }
   .sort {
-    @apply flex justify-between pt-[50px] pb-[45px] px-[71px];
+    @apply flex pt-[50px] pb-[45px] px-[71px]  justify-between;
     h3 {
       @apply text-title leading-[3.8rem] font-bold;
     }
   }
   .hotelsList {
-    @apply px-[71px];
+    @apply px-[71px] box-border;
   }
   .paginationBlock {
-    @apply flex justify-between pt-[50px] pb-[45px] px-[71px];
+    @apply flex pt-[50px] pb-[45px] px-[71px]  justify-between;
   }
 }

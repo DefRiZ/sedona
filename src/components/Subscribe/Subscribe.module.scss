@@ -1,7 +1,7 @@
 .root {
   @apply bg-subscribe bg-cover pb-[94px] duration-500;
   &:hover {
-    @apply scale-[1.02];
+    @apply scale-105;
   }
   .title {
     @apply pt-[94px] mb-[30px] text-white;
@@ -16,9 +16,9 @@
         @apply text-black opacity-[0.8] text-text leading-link;
       }
 
-      @apply py-[20px] pl-[20px] pr-[300px] rounded-l-[10px];
+      @apply py-[20px] pl-[20px] pr-[300px] rounded-l-xl;
       @media (max-width: 750px) {
-        @apply pr-[150px];
+        @apply pr-36;
       }
     }
   }

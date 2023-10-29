@@ -3,7 +3,7 @@
     @apply text-link leading-link mb-[30px] font-bold;
   }
   .radio {
-    @apply flex flex-col justify-center pb-[83px];
+    @apply flex flex-col pb-[83px]  justify-center;
     label {
       @apply flex;
       input {
@@ -19,7 +19,7 @@
         @apply opacity-100;
       }
       .text {
-        @apply text-text leading-[2.3rem] ml-[20px] mb-[13px];
+        @apply leading-[2.3rem] ml-[20px] mb-[13px]  text-text;
       }
     }
   }

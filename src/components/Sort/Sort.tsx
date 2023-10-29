@@ -22,8 +22,6 @@ const Sort = () => {
   const dispatch = useAppDispatch();
   const { sort } = useSelector((state: RootState) => state.filter);
 
-  const sortType = searchParams.get("parametr") || "";
-
   const changeSortType = (object: { name: string; sort: string }) => {
     const newSearchParams: URLSearchParamsInit = { parametr: object.sort };
     setSearchParams(newSearchParams);

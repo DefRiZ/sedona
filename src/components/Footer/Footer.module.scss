@@ -1,5 +1,5 @@
 .container {
-  @apply max-w-[1200px] mx-auto flex justify-between px-[71px] pt-[50px] pb-[40px];
+  @apply max-w-[1200px] mx-auto flex px-[71px] pt-[50px] pb-[40px] justify-between;
 
   .social {
     @apply flex;
@@ -7,12 +7,12 @@
       &:last-of-type {
         @apply mr-0;
       }
-      @apply mr-[30px];
+      @apply mr-[30px] inline-block;
     }
   }
   .number {
     a {
-      @apply text-[4.0rem];
+      @apply text-[4.0rem] inline-block;
       @media (max-width: 800px) {
         @apply text-text;
       }
@@ -20,7 +20,7 @@
   }
   .copyright {
     h2 {
-      @apply text-[4.0rem];
+      @apply text-[4.0rem] block;
       @media (max-width: 800px) {
         @apply text-text;
       }

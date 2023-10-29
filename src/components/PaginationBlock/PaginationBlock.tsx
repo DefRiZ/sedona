@@ -12,8 +12,6 @@ const PaginationBlock = () => {
     (state: RootState) => state.filter
   );
 
-  const current = searchParams.get("page") || "1";
-
   const { data = [] } = useGetHotelsQuery({ apartmenType, range });
   const pageNumber = [];
   for (let i = 0; i <= Math.ceil(data.length / itemsPerPage); i++) {

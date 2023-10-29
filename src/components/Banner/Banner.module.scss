@@ -1,12 +1,12 @@
 .root {
   @apply relative;
   .banner {
-    @apply relative z-[-1] top-[-5px];
+    @apply z-[-1] top-[-5px] relative;
   }
   .title {
-    @apply absolute top-[8%] left-[31.5%] max-w-[40%];
+    @apply top-[8%] left-[31.5%] max-w-[40%] absolute;
   }
   .decorate {
-    @apply absolute top-[87.5%];
+    @apply top-[87.5%] absolute;
   }
 }

@@ -6,9 +6,9 @@
   .info {
     @apply flex;
     .about {
-      @apply flex flex-col ml-[17px] mr-[144px];
+      @apply flex-col ml-[17px] mr-[144px] flex;
       .name {
-        @apply text-text leading-[18px] font-bold mb-[5px];
+        @apply text-text leading-[18px]  mb-[5px] font-bold;
       }
       .type {
         @apply text-btn;
@@ -16,6 +16,6 @@
     }
   }
   .remove {
-    @apply block w-[20px] h-[20px];
+    @apply w-[20px] h-[20px] block;
   }
 }

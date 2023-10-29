@@ -8,7 +8,7 @@
   @apply flex justify-between py-[30px]  border-b border-black;
   .about {
     img {
-      @apply mr-[36px];
+      @apply mr-[36px] block;
     }
     @apply flex;
   }
@@ -19,35 +19,35 @@
     .about {
       span {
         &:first-of-type {
-          @apply mr-[78px];
+          @apply mr-[78px] inline-block;
         }
-        @apply text-benefitsText leading-[2.3rem];
+        @apply leading-[2.3rem]  text-benefitsText;
       }
     }
     .buttons {
-      @apply mt-[30px];
+      @apply mt-[30px] inline-block;
       .btnFav {
-        @apply py-[15px] ml-[8px] bg-benefits;
+        @apply py-[15px] ml-[8px] bg-benefits inline-block;
       }
       .btnFavAdded {
-        @apply py-[15px] ml-[8px] bg-[#7DB54F];
+        @apply py-[15px] ml-[8px] bg-[#7DB54F] inline-block;
       }
       .btn,
       .btnFav,
       .btnFavAdded {
         @media (max-width: 800px) {
-          @apply px-[15px];
+          @apply px-[15px] inline-block;
         }
       }
       .btnFav,
       .btnFavAdded {
         @media (max-width: 800px) {
-          @apply py-[10px];
+          @apply py-[10px] inline-block;
         }
       }
       .btn {
         @media (max-width: 800px) {
-          @apply py-[7px];
+          @apply py-[7px] inline-block;
         }
       }
     }
@@ -57,7 +57,7 @@
     .image {
       @apply mx-auto;
       img {
-        @apply max-w-[18px] max-h-[18px];
+        @apply max-w-[18px] max-h-[18px] block;
       }
     }
     span {

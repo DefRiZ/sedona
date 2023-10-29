@@ -1,17 +1,17 @@
 .root {
   h2 {
-    @apply pt-[90px] mb-[30px];
+    @apply pt-[90px] mb-[30px] block;
   }
 
   .btnWrap {
-    @apply flex justify-center mt-[73px] mb-[90px];
+    @apply flex mt-[73px] mb-[90px]  justify-center;
     .btn {
       @apply inline-block py-[30px] px-[200px] text-btn bg-accent rounded-[4px] text-white font-bold duration-200;
       &:hover {
         @apply scale-110 opacity-90;
       }
       @media (max-width: 750px) {
-        @apply px-[150px];
+        @apply px-[150px] inline-block;
       }
     }
   }

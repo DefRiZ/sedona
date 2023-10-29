@@ -1,10 +1,10 @@
 .root {
   .titleSection {
     .title {
-      @apply mt-[63px] mb-[23px];
+      @apply mt-[63px] mb-[23px] box-border;
     }
     .subtitle {
-      @apply mb-[79px];
+      @apply mb-[79px] box-border;
     }
   }
   .infoSection {
@@ -16,14 +16,14 @@
       @apply grid-cols-1;
     }
     h3 {
-      @apply text-benefitsTitle leading-benefitsTitle font-bold text-center mt-[98px] mb-[25px];
+      @apply text-benefitsTitle leading-benefitsTitle font-bold  mt-[98px] mb-[25px] text-center;
     }
     span,
     p {
       @apply text-benefitsText leading-benefitsText text-center block;
     }
     p {
-      @apply mt-[20px] mb-[79px];
+      @apply mt-[20px] mb-[79px] block;
     }
     img {
       &:last-of-type {
@@ -59,14 +59,14 @@
         @apply mt-[89px] mx-auto;
       }
       h3 {
-        @apply mt-[23px] mb-[20px];
+        @apply mt-[23px] mb-[20px] block;
       }
     }
     .benefit:hover,
     .house:hover,
     .food:hover,
     .gifts:hover {
-      @apply bg-benefits/60 cursor-pointer scale-[1.02];
+      @apply bg-benefits/60  scale-[1.02] cursor-pointer;
     }
   }
 }
