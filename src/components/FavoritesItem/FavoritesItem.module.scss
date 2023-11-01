@@ -1,21 +1,35 @@
 .root {
-  @apply flex items-center justify-between bg-white p-[25px] rounded-2xl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 25px;
+  border-radius: 16px;
   .photo {
-    @apply max-w-[40px] max-h-[40px] rounded-full;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 100%;
   }
   .info {
-    @apply flex;
+    display: flex;
     .about {
-      @apply flex-col ml-[17px] mr-[144px] flex;
+      display: flex;
+      flex-direction: column;
+      margin-left: 17px;
+      margin-right: 144px;
       .name {
-        @apply text-text leading-[18px]  mb-[5px] font-bold;
+        font-size: 1.8rem;
+        line-height: 18px;
+        margin-bottom: 5px;
+        font-weight: 700;
       }
       .type {
-        @apply text-btn;
+        font-size: 1.6rem;
       }
     }
   }
   .remove {
-    @apply w-[20px] h-[20px] block;
+    width: 20px;
+    height: 20px;
   }
 }

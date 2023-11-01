@@ -1,67 +1,91 @@
 .root {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom-width: 1px;
+  border-color: black;
   .image {
-    @apply flex;
+    display: flex;
   }
   &:first-of-type {
-    @apply border-t;
+    border-top-width: 1px;
   }
-  @apply flex justify-between py-[30px]  border-b border-black;
   .about {
+    display: flex;
     img {
-      @apply mr-[36px] block;
+      margin-right: 36px;
     }
-    @apply flex;
   }
   .info {
     h2 {
-      @apply text-benefitsTitle leading-[3.1rem] font-bold;
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+      font-weight: 700;
     }
     .about {
       span {
+        line-height: 2.3rem;
+        font-size: 1.8rem;
         &:first-of-type {
-          @apply mr-[78px] inline-block;
+          margin-right: 78px;
         }
-        @apply leading-[2.3rem]  text-benefitsText;
       }
     }
     .buttons {
-      @apply mt-[30px] inline-block;
+      margin-top: 30px;
       .btnFav {
-        @apply py-[15px] ml-[8px] bg-benefits inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 8px;
+        background-color: #83b3d3;
       }
       .btnFavAdded {
-        @apply py-[15px] ml-[8px] bg-[#7DB54F] inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 8px;
+        background-color: #7db54f;
       }
       .btn,
       .btnFav,
       .btnFavAdded {
         @media (max-width: 800px) {
-          @apply px-[15px] inline-block;
+          padding-left: 10px;
+          padding-right: 10px;
         }
       }
       .btnFav,
       .btnFavAdded {
         @media (max-width: 800px) {
-          @apply py-[10px] inline-block;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
       .btn {
         @media (max-width: 800px) {
-          @apply py-[7px] inline-block;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
     }
   }
   .rating {
-    @apply flex flex-col justify-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .image {
-      @apply mx-auto;
+      margin-left: auto;
+      margin-right: auto;
       img {
-        @apply max-w-[18px] max-h-[18px] block;
+        max-width: 18px;
+        max-height: 18px;
       }
     }
     span {
-      @apply px-[20px] py-[10px] bg-[#F2F2F2] text-btn;
+      padding: 10px 20px;
+      background-color: #f2f2f2;
+      font-size: 1.6rem;
     }
   }
 }

@@ -1,20 +1,25 @@
 .root {
   .title {
-    @apply text-link leading-link font-bold;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
   }
   .priceRangeBlock {
-    @apply flex;
+    display: flex;
     .priceRange {
-      @apply px-[20px] py-[15px] border-[2px] border-white;
+      padding: 15px 20px;
+      border: 2px white solid;
       .price {
-        @apply mr-[80px] text-text;
+        margin-right: 80px;
+        font-size: 1.8rem;
       }
       .priceText {
-        @apply text-text opacity-30;
+        font-size: 1.8rem;
+        opacity: 0.3;
       }
     }
   }
   .slider {
-    @apply mt-[50px] inline-block;
+    margin-top: 50px;
   }
 }

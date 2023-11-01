@@ -1,17 +1,28 @@
 .root {
   .list {
-    @apply grid grid-cols-1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
   .sort {
-    @apply flex pt-[50px] pb-[45px] px-[71px]  justify-between;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 45px;
+    padding-left: 71px;
+    padding-right: 71px;
     h3 {
-      @apply text-title leading-[3.8rem] font-bold;
+      font-size: 3rem;
+      line-height: 3.8rem;
+      font-weight: 700;
     }
   }
   .hotelsList {
-    @apply px-[71px] box-border;
+    padding-left: 71px;
+    padding-right: 71px;
   }
   .paginationBlock {
-    @apply flex pt-[50px] pb-[45px] px-[71px]  justify-between;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 71px 45px;
   }
 }

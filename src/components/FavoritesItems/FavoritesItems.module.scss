@@ -1,3 +1,10 @@
 .root {
-  @apply absolute top-[117%] right-[20%] bg-white z-10 border-[1px] border-[#E6E6E6] rounded-2xl;
+  position: absolute;
+  top: 117%;
+  right: 20%;
+  background-color: white;
+  z-index: 10;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  border-radius: 16px;
 }

@@ -1,15 +1,34 @@
 .rc-slider {
-  @apply relative w-[100%] h-[14px]  mt-[30px] touch-none;
+  position: relative;
+  width: 100%;
+  height: 14px;
+  margin-top: 30px;
+  touch-action: none;
   .rc-slider-rail {
-    @apply absolute w-[100%] h-[4px]  bg-gray-500;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: gray;
   }
   .rc-slider-track {
-    @apply absolute h-[4px] bg-white;
+    position: absolute;
+    height: 4px;
+    background-color: white;
   }
   .rc-slider-step {
-    @apply absolute w-[100%] h-[4px] bg-transparent;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
   }
   .rc-slider-handle {
-    @apply absolute z-10 w-[20px] h-[20px] bg-white  rounded-[5px] mt-[-7px] cursor-pointer;
+    position: absolute;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: -7px;
+    cursor: pointer;
   }
 }

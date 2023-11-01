@@ -1,28 +1,31 @@
 .container {
-  @apply max-w-[1200px] mx-auto flex px-[71px] pt-[50px] pb-[40px] justify-between;
-
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 50px 71px 40px 71px;
   .social {
-    @apply flex;
+    display: flex;
     .link {
+      margin-right: 30px;
       &:last-of-type {
-        @apply mr-0;
+        margin-right: 0px;
       }
-      @apply mr-[30px] inline-block;
     }
   }
   .number {
     a {
-      @apply text-[4.0rem] inline-block;
+      font-size: 4rem;
       @media (max-width: 800px) {
-        @apply text-text;
+        font-size: 1.8rem;
       }
     }
   }
   .copyright {
     h2 {
-      @apply text-[4.0rem] block;
+      font-size: 4rem;
       @media (max-width: 800px) {
-        @apply text-text;
+        font-size: 1.8rem;
       }
     }
   }
