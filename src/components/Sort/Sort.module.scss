@@ -1,21 +1,37 @@
 .sort {
-  @apply relative;
+  position: relative;
   .label {
-    @apply flex justify-between px-[19px] py-[12px] border-[#E6E6E6] border-[2px] cursor-pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 19px;
+    border: #e6e6e6 2px solid;
+    cursor: pointer;
     span {
-      @apply mr-[94px] text-text;
+      margin-right: 94px;
+      font-size: 1.8rem;
     }
   }
   .popup {
-    @apply absolute right-0 bg-white;
+    position: absolute;
+    right: 0px;
+    background-color: white;
     .item {
-      @apply text-text text-[#333333] px-[30px] py-[12px] border-b-[#E6E6E6] border-[1px] cursor-pointer;
+      font-size: 1.8rem;
+      color: #333333;
+      padding: 12px 30px;
+      border: 1px #e6e6e6 solid;
+      cursor: pointer;
       &:hover {
-        @apply bg-benefits  opacity-60;
+        background-color: #83b3d3;
       }
     }
     .active {
-      @apply text-text text-white px-[30px] py-[12px] border-b-[#E6E6E6] border-[1px] cursor-pointer bg-benefits;
+      font-size: 1.8rem;
+      color: white;
+      padding: 12px 30px;
+      border: 1px #e6e6e6 solid;
+      cursor: pointer;
+      background-color: #83b3d3;
     }
   }
 }

@@ -1,25 +1,50 @@
 .root {
   .title {
-    @apply text-link leading-link mb-[30px] font-bold;
+    font-size: 2rem /* 32px */;
+    line-height: 2.5rem /* 40px */;
+    margin-bottom: 30px;
+    font-weight: 700;
   }
   .radio {
-    @apply flex flex-col pb-[83px]  justify-center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 83px;
+    justify-content: center;
+
     label {
-      @apply flex;
+      display: flex;
+      cursor: pointer;
       input {
-        @apply hidden;
+        display: none;
       }
       .fake {
-        @apply w-[20px] h-[20px] bg-white block rounded-full relative;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        display: block;
+        border-radius: 100%;
+        position: relative;
         &::before {
-          @apply content-[""] w-[10px] h-[10px] rounded-full bg-[#3F5E72] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background-color: #3f5e72;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          opacity: 0;
         }
       }
       input:checked + .fake::before {
-        @apply opacity-100;
+        opacity: 1;
       }
       .text {
-        @apply leading-[2.3rem] ml-[20px] mb-[13px]  text-text;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        margin-left: 20px;
+        margin-bottom: 13px;
       }
     }
   }

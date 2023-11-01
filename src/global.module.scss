@@ -1,15 +1,32 @@
 .btn {
-  @apply text-btn bg-accent py-[10px] px-[50px] rounded-[4px] text-white hover:opacity-[80%] font-bold;
+  font-size: 1.6rem;
+  background-color: #756257;
+  padding: 10px 50px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  transition-duration: 200ms;
+  &:hover {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 .container {
-  @apply max-w-[1200px] mx-auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
-  @apply font-bold text-title leading-title text-center;
+  font-size: 3rem /* 48px */;
+  line-height: 3.6rem /* 57.6px */;
+  text-align: center;
+  font-weight: 700;
 }
 
 .subtitle {
-  @apply text-sub leading-sub text-center;
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  text-align: center;
 }

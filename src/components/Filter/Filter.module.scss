@@ -1,23 +1,45 @@
 .root {
-  @apply text-white px-0 mt-[-5px];
+  color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: -5px;
+  background-image: url("/img/sort/catalog-background.jpg");
+  background-size: cover;
   .container {
-    @apply px-[71px] box-border;
+    padding-left: 71px;
+    padding-right: 71px;
     h1 {
-      @apply text-[6.0rem] leading-[7.7rem] pt-[35px] block;
+      font-size: 6rem;
+      line-height: 7.7rem;
+      padding-top: 35px;
     }
     .breadcrumbs {
-      @apply flex mt-[5px] mb-[45px]  items-center;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 45px;
+
       img {
-        @apply mr-[10px] block;
+        margin-right: 10px;
       }
       span {
-        @apply leading-text text-btn cursor-pointer;
+        line-height: 2.1rem;
+        font-size: 1.6rem;
+        cursor: pointer;
       }
     }
     .filtration {
-      @apply flex justify-between items-start;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       .resetBtn {
-        @apply leading-[2.3rem] text-text;
+        line-height: 2.3rem;
+        font-size: 1.8rem;
+        transition-duration: 200ms;
+        &:hover {
+          scale: 1.1;
+          opacity: 0.8;
+        }
       }
     }
   }

@@ -87,24 +87,26 @@ const HotelItem: React.FC<elementApi> = ({
             <span>От {price} грн.</span>
           </div>
           <div className={styles.buttons}>
-            <Link className={`${global.btn} ${styles.btn}`} to="/">
+            <Link className={`${global.btn} ${styles.btn}`} to="/hotels">
               ПОДРОБНЕЕ
             </Link>
             {!isFavorite && (
-              <button
+              <Link
+                to="/hotels"
                 onClick={() => onClickAdd()}
                 className={`${global.btn} ${styles.btnFav}`}
               >
                 В ИЗБРАННОЕ
-              </button>
+              </Link>
             )}
             {isFavorite && (
-              <button
+              <Link
+                to="/hotels"
                 onClick={() => onClickRemove(id)}
                 className={` ${global.btn} ${styles.btnFavAdded} `}
               >
                 В ИЗБРАННОМ
-              </button>
+              </Link>
             )}
           </div>
         </div>
