@@ -4,6 +4,11 @@
   justify-content: space-between;
   margin: 0 auto;
   padding: 50px 71px 40px 71px;
+  @media (max-width: 680px) {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
   .social {
     display: flex;
     .link {
@@ -14,6 +19,10 @@
     }
   }
   .number {
+    display: inline-block;
+    @media (max-width: 680px) {
+      margin: 20px auto;
+    }
     a {
       font-size: 4rem;
       @media (max-width: 800px) {

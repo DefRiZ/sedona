@@ -32,6 +32,10 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      @media (max-width: 740px) {
+        flex-direction: column;
+        align-items: center;
+      }
       .resetBtn {
         line-height: 2.3rem;
         font-size: 1.8rem;
@@ -39,6 +43,10 @@
         &:hover {
           scale: 1.1;
           opacity: 0.8;
+        }
+        @media (max-width: 740px) {
+          font-size: 4.5rem;
+          margin-bottom: 30px;
         }
       }
     }

@@ -9,6 +9,7 @@
     margin-top: 73px;
     margin-bottom: 90px;
     justify-content: center;
+
     .btn {
       display: inline-block;
       padding: 30px 200px;
@@ -18,13 +19,12 @@
       color: white;
       font-weight: 700;
       transition-duration: 200ms;
+      @media (max-width: 460px) {
+        padding: 20px;
+      }
       &:hover {
         scale: 1.1;
         opacity: 0.9;
-      }
-      @media (max-width: 750px) {
-        padding-left: 150px;
-        padding-right: 150px;
       }
     }
   }

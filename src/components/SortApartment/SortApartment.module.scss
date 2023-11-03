@@ -10,7 +10,9 @@
     flex-direction: column;
     padding-bottom: 83px;
     justify-content: center;
-
+    @media (max-width: 740px) {
+      padding-bottom: 20px;
+    }
     label {
       display: flex;
       cursor: pointer;

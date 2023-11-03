@@ -11,6 +11,11 @@ header {
       justify-content: center;
       margin-left: 195px;
     }
+    @media (max-width: 680px) {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
     nav {
       @media (max-width: 760px) {
         display: none;
@@ -29,13 +34,13 @@ header {
             line-height: 2.5rem;
             font-weight: 700;
             &:hover {
-              border-bottom-width: 2px;
-              border-color: #756257;
+              border-bottom: 2px #756257 solid;
             }
           }
         }
       }
     }
+
     .secondNav {
       display: flex;
       align-items: center;
@@ -98,6 +103,7 @@ header {
         width: 30px;
         height: 18px;
         cursor: pointer;
+        position: relative;
         span {
           display: inline-block;
           height: 2px;
@@ -121,6 +127,9 @@ header {
         }
         @media (max-width: 760px) {
           display: flex;
+        }
+        @media (max-width: 680px) {
+          margin: 20px 0px;
         }
       }
     }

@@ -3,10 +3,17 @@
   .selected {
     display: flex;
     align-items: center;
+    @media (max-width: 740px) {
+      flex-direction: column;
+    }
     .title {
       font-size: 1.8rem /* 28.8px */;
       line-height: 2.3rem /* 36.8px */;
       margin-right: 50px;
+      @media (max-width: 740px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
     .label {
       display: flex;
