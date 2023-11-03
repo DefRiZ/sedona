@@ -84,11 +84,11 @@ const HotelItem: React.FC<elementApi> = ({
           <h2>{name}</h2>
           <div className={styles.about}>
             <span>{type}</span>
-            <span>От {price} грн.</span>
+            <span>Від {price} грн.</span>
           </div>
           <div className={styles.buttons}>
             <Link className={`${global.btn} ${styles.btn}`} to="/hotels">
-              ПОДРОБНЕЕ
+              ДЕТАЛЬНІШЕ
             </Link>
             {!isFavorite && (
               <Link
@@ -96,7 +96,7 @@ const HotelItem: React.FC<elementApi> = ({
                 onClick={() => onClickAdd()}
                 className={`${global.btn} ${styles.btnFav}`}
               >
-                В ИЗБРАННОЕ
+                В УЛЮБЛЕНЕ
               </Link>
             )}
             {isFavorite && (
@@ -105,7 +105,7 @@ const HotelItem: React.FC<elementApi> = ({
                 onClick={() => onClickRemove(id)}
                 className={` ${global.btn} ${styles.btnFavAdded} `}
               >
-                В ИЗБРАННОМ
+                В УЛЮБЛЕНОМУ
               </Link>
             )}
           </div>

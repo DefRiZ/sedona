@@ -15,6 +15,13 @@ import { setIsOpenBurger } from "../../redux/slices/filterSlice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+export const onClickAbout = () => {
+  window.scrollTo({
+    top: 550,
+    behavior: "smooth",
+  });
+};
+
 const Header = () => {
   const dispatch = useAppDispatch();
   const { isOpenBurger } = useSelector((state: RootState) => state.filter);
@@ -36,6 +43,7 @@ const Header = () => {
       document.body.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
   return (
     <header>
       <div className={styles.container}>
@@ -43,17 +51,21 @@ const Header = () => {
           <ul>
             <li>
               <Link className={styles.link} to="/">
-                Главная
+                Головна
               </Link>
             </li>
             <li>
-              <Link className={styles.link} to="/">
-                О Седоне
+              <Link
+                onClick={() => onClickAbout()}
+                className={styles.link}
+                to="/"
+              >
+                Про Сідону
               </Link>
             </li>
             <li>
               <Link className={styles.link} to="/hotels">
-                Гостиницы
+                Готелі
               </Link>
             </li>
           </ul>
@@ -75,7 +87,7 @@ const Header = () => {
             {isOpen && <FavoritesItems />}
           </div>
           <Link className={styles.btn} to="/hotels">
-            Хочу сюда!
+            Хочу сюди!
           </Link>
           <div
             onClick={() => dispatch(setIsOpenBurger())}

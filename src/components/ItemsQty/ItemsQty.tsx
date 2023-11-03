@@ -33,7 +33,7 @@ const ItemsQty = () => {
   return (
     <div className={styles.root}>
       <div className={styles.selected}>
-        <h3 className={styles.title}>Гостиниц на странице:</h3>
+        <h3 className={styles.title}>Готелів на сторінці:</h3>
         <div
           ref={qtyRef}
           onClick={() => setIsOpen(!isOpen)}

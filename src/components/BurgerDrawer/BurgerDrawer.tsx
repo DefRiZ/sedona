@@ -6,10 +6,15 @@ import { Link } from "react-router-dom";
 import { setIsOpenBurger } from "../../redux/slices/filterSlice";
 import { useGetFavoritesQuery } from "../../redux/favoritesApi";
 import { useAppDispatch } from "../../redux/store";
+import { onClickAbout } from "../Header/Header";
 
 const BurgerDrawer = () => {
   const dispatch = useAppDispatch();
   const { data = [] } = useGetFavoritesQuery(null);
+  const onClickBurger = () => {
+    dispatch(setIsOpenBurger());
+    onClickAbout();
+  };
 
   return (
     <article className={styles.container}>
@@ -21,16 +26,12 @@ const BurgerDrawer = () => {
               className={styles.link}
               to="/"
             >
-              Главная
+              Головна
             </Link>
           </li>
           <li>
-            <Link
-              onClick={() => dispatch(setIsOpenBurger())}
-              className={styles.link}
-              to="/"
-            >
-              О Седоне
+            <Link onClick={onClickBurger} className={styles.link} to="/">
+              Про седону
             </Link>
           </li>
           <li>
@@ -39,7 +40,7 @@ const BurgerDrawer = () => {
               className={styles.link}
               to="/hotels"
             >
-              Гостиницы
+              Готелі
             </Link>
           </li>
           <li>

@@ -16,13 +16,13 @@ const Filter = () => {
   return (
     <section className={styles.root}>
       <div className={styles.container}>
-        <h1>Гостиницы Седоны</h1>
+        <h1>Готелі Седони</h1>
         <div className={styles.breadcrumbs}>
           <Link to="/">
             <img src={home} alt="home-page" />
           </Link>
           <img src={arrow} alt="arrow" />
-          <span>Гостиницы</span>
+          <span>Готелі</span>
         </div>
         <div className={styles.filtration}>
           <SortApartment />
@@ -31,7 +31,7 @@ const Filter = () => {
             onClick={() => dispatch(setByDefault())}
             className={styles.resetBtn}
           >
-            Сбросить
+            Скинути налаштування
           </button>
         </div>
       </div>

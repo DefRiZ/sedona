@@ -27,7 +27,7 @@ const Footer = () => {
           </span>
         </div>
         <div className={styles.copyright}>
-          <h2>&copy;Andrei</h2>
+          <h2>&copy;Andrew</h2>
         </div>
       </div>
     </footer>

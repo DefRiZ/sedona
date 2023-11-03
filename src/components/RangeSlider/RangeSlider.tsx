@@ -14,11 +14,11 @@ const RangeSlider = () => {
   };
   return (
     <div className={styles.root}>
-      <h3 className={styles.title}>Стоимость, грн.</h3>
+      <h3 className={styles.title}>Вартість, грн.</h3>
       <div className={styles.priceRangeBlock}>
         <div className={styles.priceRange}>
           <span className={styles.price}>{range[0]}</span>
-          <span className={styles.priceText}>от</span>
+          <span className={styles.priceText}>від</span>
         </div>
         <div className={styles.priceRange}>
           <span className={styles.price}>{range[1]}</span>

@@ -5,14 +5,14 @@ const Subscribe = () => {
   return (
     <article className={styles.root}>
       <h2 className={`${global.title} ${styles.title}`}>
-        Подпишитесь на рассылку
+        Підпишіться на розсилку
       </h2>
       <p className={`${global.subtitle} ${styles.subtitle}`}>
-        Только полезная информация и никакого спама, честное бойскаутское!
+        Тільки корисна інформація та ніякого спаму, чесне бойскаутське!
       </p>
       <form>
         <input className={styles.input} type="email" placeholder="Ваш e-mail" />
-        <input className={styles.btn} type="submit" value="Подписаться" />
+        <input className={styles.btn} type="submit" value="Підписатися" />
       </form>
     </article>
   );

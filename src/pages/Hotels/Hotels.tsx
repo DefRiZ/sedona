@@ -33,7 +33,7 @@ const Hotels = () => {
       <div className={global.container}>
         <Filter />
         <div className={styles.sort}>
-          <h3>Найдено гостиниц: {data.length}</h3>
+          <h3>Найдено готелів: {data.length}</h3>
           <Sort />
         </div>
         <div className={styles.hotelsList}>

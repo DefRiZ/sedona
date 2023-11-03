@@ -6,7 +6,7 @@ import { useAppDispatch } from "../../redux/store";
 import { setApartmenType } from "../../redux/slices/filterSlice";
 import { URLSearchParamsInit, useSearchParams } from "react-router-dom";
 
-const apartments = ["Гостиница", "Мотель", "Апартаменты"];
+const apartments = ["Готель", "Мотель", "Апартаменти"];
 
 const SortApartment = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,7 +18,7 @@ const SortApartment = () => {
   };
   return (
     <div className={styles.root}>
-      <h2 className={styles.title}>Тип жилья:</h2>
+      <h2 className={styles.title}>Тип житла:</h2>
       <div className={styles.radio}>
         {apartments.map((apartment, i) => (
           <label key={i}>
