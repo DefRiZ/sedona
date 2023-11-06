@@ -17,17 +17,26 @@ const Hotels = () => {
     (state: RootState) => state.filter
   );
   const sortType = sort.sort;
-  const { data = [], isLoading } = useGetHotelsQuery({
+  const {
+    data = [],
+
+    isError,
+  } = useGetHotelsQuery({
     sortType,
     apartmenType,
     range,
     currentPage,
     itemsPerPage,
   });
-  if (isLoading) <h1>Loading</h1>;
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const hotelsList = data.map((item: elementApi) => (
+    <HotelItem key={item.id} {...item} />
+  ));
+
   return (
     <section className={styles.root}>
       <div className={global.container}>
@@ -38,9 +47,14 @@ const Hotels = () => {
         </div>
         <div className={styles.hotelsList}>
           <ul className={styles.list}>
-            {data.map((item: elementApi) => (
-              <HotelItem key={item.id} {...item} />
-            ))}
+            {isError && (
+              <h1 className={styles.error}>
+                Ця демоверсія не підтримує json-server. Запустіть проект з
+                гіт-хабу за допомогою команди "npm run dev", щоб побачити список
+                готелів.
+              </h1>
+            )}
+            {data && hotelsList}
           </ul>
         </div>
         <div className={styles.paginationBlock}>
